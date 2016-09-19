@@ -1,0 +1,44 @@
+body{
+	background: #F6CEF5;
+}
+.texto{
+	 width: 600px;
+     margin: auto;
+     margin-left: 90px;
+     margin-top: 15px;
+     border: 1px solid purple;
+     padding: 10px 20px;
+     box-sizing: border-box;
+     border-radius: 7px;
+     word-wrap: break-word;
+     background: #ffffff;
+}
+
+form{
+     width: 600px;
+     margin: auto;
+     padding: 10px 20px;
+     box-sizing: border-box;
+     margin-top: 60px;
+     margin-left: 90px;
+     border-radius: 7px;
+     background: purple;
+}
+
+textarea{
+     width: 100%;
+     margin-bottom: 20px;
+     padding: 7px;
+     box-sizing: border-box;
+     font-size: 17px;
+     min-height: 100px;
+     max-height: 200px;
+     max-width: 100%;
+}
+
+.button{
+     background: #000033;
+     color: #c0c0c0;
+}
+
+
