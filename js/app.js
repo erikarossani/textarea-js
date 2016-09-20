@@ -16,10 +16,32 @@ window.addEventListener("load", function() {
     });  
     function agregarMensaje(texto){
         var nuevoItem = document.createElement("div");
+        var hora = document.createElement("div");
+        var fechaHora = new Date();
+        var horas = fechaHora.getHours();
+        var minutos = fechaHora.getMinutes();
+        var segundos = fechaHora.getSeconds();
+
+        if(horas < 10){ 
+          horas = "0" + horas; 
+        }
+
+       if(minutos < 10) {
+         minutos = "0" + minutos; 
+       }
+
+       if(segundos < 10){ 
+        segundos = "0" + segundos; 
+       }
+
+       hora.textContent = horas + ":" + minutos + ":" + segundos;
+
         nuevoItem.classList.add("texto");
+        hora.classList.add("hora");
         nuevoItem.innerHTML =texto;
 
        var lista = document.getElementById("comentario");
+       lista.insertBefore(hora, comentario.childNodes[0]);
        lista.insertBefore(nuevoItem, comentario.childNodes[0]);
        document.getElementById("texto").value = "";
     }  
