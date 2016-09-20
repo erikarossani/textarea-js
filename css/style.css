@@ -32,9 +32,9 @@ textarea{
      box-sizing: border-box;
      border-radius: 7px;
      font-size: 17px;
-     min-height: 100px;
-     max-height: 200px;
-     max-width: 100%;
+     min-height: 20px;
+     max-height: 160px; 
+     overflow: hidden;
 }
 
 button{

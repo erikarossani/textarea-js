@@ -10,6 +10,7 @@ window.addEventListener("load", function() {
             agregarMensaje(texto);
             textArea.value ="";
             boton.disabled= true;
+            contar.textContent= "140";
 
 
     });  
@@ -26,7 +27,9 @@ window.addEventListener("load", function() {
     textArea.addEventListener("keyup", function(){
       var longitud = 140;
       var caracter = textArea.value.length;
-      contar.innerText = longitud - caracter;
+      contar.innerText = longitud - caracter;      
+      textArea.style.height = "1px";
+      textArea.style.height = (25+textArea.scrollHeight)+"px";
 
       if(parseInt(contar.innerText) <= 0){
         boton.disabled=true;
@@ -36,11 +39,14 @@ window.addEventListener("load", function() {
 
       if(parseInt(contar.innerText) <= 20){
          contar.style.color ="#B80D57";
+      } else{
+         contar.style.color ="#000000";
       }
 
       if(parseInt(contar.innerText) <= 10){
         contar.style.color ="#986EAD";
       }
-     });
 
+     });
+     
 });
