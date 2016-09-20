@@ -23,14 +23,24 @@ window.addEventListener("load", function() {
        document.getElementById("texto").value = "";
     }  
 
-    textArea.addEventListener("keydown", function(){
-      boton.disabled=false;
-
-     });
     textArea.addEventListener("keyup", function(){
       var longitud = 140;
       var caracter = textArea.value.length;
       contar.innerText = longitud - caracter;
+
+      if(parseInt(contar.innerText) <= 0){
+        boton.disabled=true;
+      } else {
+        boton.disabled=false;
+      }
+
+      if(parseInt(contar.innerText) <= 20){
+         contar.style.color ="#B80D57";
+      }
+
+      if(parseInt(contar.innerText) <= 10){
+        contar.style.color ="#986EAD";
+      }
      });
 
 });
