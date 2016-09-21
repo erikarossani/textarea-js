@@ -11,6 +11,8 @@ window.addEventListener("load", function() {
             textArea.value ="";
             boton.disabled= true;
             contar.textContent= "140";
+            textArea.style.height = "50px";
+
 
 
     });  
@@ -50,7 +52,7 @@ window.addEventListener("load", function() {
       var longitud = 140;
       var caracter = textArea.value.length;
       contar.innerText = longitud - caracter;      
-      textArea.style.height = "1px";
+      textArea.style.height = "10px";
       textArea.style.height = (25+textArea.scrollHeight)+"px";
 
       if(parseInt(contar.innerText) <= 0){
