@@ -38,10 +38,10 @@ window.addEventListener("load", function() {// para cuand se cargue la ventana d
   var textArea = document.getElementById("texto");// se esta llamando al <textarea>
   var contar = document.getElementById("contar");// Se llama el <div> donde va aparecer el contador
 
-	boton.addEventListener("click", function(e){// se esta indicando el evento click 
-		e.preventDefault();
+	boton.addEventListener("click", function(e){// se le indica que cuando se haga click en boton se ejecute lo siguiente:
+		e.preventDefault();//Detiene la acción predeterminada de un elemento suceda.
 		var texto = textArea.value;
-            agregarMensaje(texto);
+            agregarMensaje(texto);// hace que se muestre en el navegador lo que ejecuta la funcion
             textArea.value ="";
             boton.disabled= true;
             contar.textContent= "140";
@@ -50,7 +50,7 @@ window.addEventListener("load", function() {// para cuand se cargue la ventana d
 
 
     });  
-    function agregarMensaje(texto){
+    function agregarMensaje(texto){//funcion para mostrar hora y poder hacer comentario creando un div:
         var nuevoItem = document.createElement("div");
         var hora = document.createElement("div");
         var fechaHora = new Date();
